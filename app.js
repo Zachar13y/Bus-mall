@@ -26,24 +26,32 @@ const wine = new Pic ('wine', 'imgs/wine.jpg');
 
 const picArray = [bag, banana, bathroom, boots, breakfast, bubblegum, chair, cthulhu, dogDuck, dragon, pen, pet, scissors, shark, sweep, tauntaun, unicorn, usb, water, wine];
 
-console.log (picArray);
-// function appendRandomPic(){
-
-//     for(let i = 0; i < 3; i++) {
-//     const game = document.getElementById('game');
-//     randomPicc = picArray[ Math.floor(Math.random() * 20)];
-
-// }
-// }
-
-
-function Pic (name, src) {
-    this.type = 'type';
+function Pic (type, src) {
+    this.type = type;
     this.src = src;
     this.picked = 0;
+};
+Pic.prototype.render = function () {
+    const ele = document.createElement('img');
+    ele.src = this.src;
+    return ele;
+};
+//create image element
+//give the element some stuff including src
+//return element
+
+// const ele = document.createElement('Pic'['type', 'src']);
+for (let i = 0; i < 3; i++){
+    appendRandomPic();
 }
 
-// pic.prototype.render = function () {
-//     const ele =
-// };
+function appendRandomPic (){
+    const show = document.getElementById('show');
+    const randomPic = picArray[ Math.floor(Math.random() * picArray.length)];
+    const randomPicEle = randomPic.render();
 
+    show.appendChild(randomPicEle);
+}
+
+// appendRandomPic();
+console.log (picArray);
