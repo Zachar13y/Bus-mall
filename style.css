@@ -1,0 +1,43 @@
+
+header{
+    display: inline-table;
+    width: 100%;
+    color: firebrick;
+    text-align: center;
+}
+h1{
+    text-align: center;
+    margin: 5px;
+    padding: 10px;
+    border: 10px;
+    font-size: 44px;
+}
+header img{
+    margin: 0 auto;
+    padding: 10px;
+    /* border: */
+}
+h3{
+    text-align: center;
+    margin: 10px;
+    padding: 10px;
+    border: 10px;
+    font-size: 28px;
+}
+
+#survey img{
+    border: 2px solid;
+    margin: 5px;
+    align-content: center;
+    width: 25%;
+}
+
+#survey{
+    text-align: center;
+    padding: 15px;
+    background: rgb(71, 117, 185)
+}
+
+body{
+    background: rgb(88, 80, 80);
+}
